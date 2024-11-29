@@ -1,0 +1,85 @@
+.section-title {
+    text-align: center;
+    color: var(--accent1);
+    font-size: 3rem;
+    margin-bottom: 4rem;
+    position: relative;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInOut {
+
+    0%,
+    100% {
+        opacity: 0.3;
+    }
+
+    50% {
+        opacity: 0.8;
+    }
+}
+
+.broadcast-experience {
+    padding: 6rem 2rem;
+    background: var(--accent2);
+    position: relative;
+}
+
+.broadcast-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.broadcast-card {
+    background: rgba(253, 224, 71, 0.03);
+    padding: 2rem;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+    border: 1px solid rgba(253, 224, 71, 0.1);
+}
+
+.stats-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    padding: 4rem 2rem;
+    background: var(--bg);
+}
+
+.stat-counter {
+    text-align: center;
+    color: var(--accent1);
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.about-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.about-section::before {
+    content: "STUDIOTECH";
+    position: absolute;
+    font-size: 15vw;
+    opacity: 0.03;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-30deg);
+    white-space: nowrap;
+    font-weight: 900;
+}

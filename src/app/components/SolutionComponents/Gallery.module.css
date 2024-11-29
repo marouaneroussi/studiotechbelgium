@@ -1,0 +1,179 @@
+.gallerySection {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.sectionTitle {
+    margin-bottom: 1.5rem;
+    animation: slideDown 0.8s ease-out;
+    color: var(--accent1);
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.sectionTitle h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    animation: slideDown 0.8s ease-out;
+   
+}
+
+.galleryGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* Default for larger screens */
+    gap: 1.5rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .galleryGrid {
+        grid-template-columns: 1fr;
+        /* Single column for mobile */
+    }
+}
+
+/* Existing styles for gallery item animations */
+.galleryItem {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s ease-in-out;
+    opacity: 0;
+}
+
+.fadeIn {
+    animation: fadeIn 1s forwards;
+}
+
+.galleryImage {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.6s ease-in-out;
+}
+
+.scaleUp {
+    transform: scale(1);
+}
+
+.galleryImage:hover {
+    transform: scale(1.1);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, var(--accent1), transparent);
+    opacity: 0.2;
+    z-index: 1;
+}
+
+.textContainer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    z-index: 2;
+    color: white;
+    transform: translateY(100%);
+    transition: transform 0.4s ease-in-out;
+}
+
+.galleryItem:hover .textContainer {
+    transform: translateY(0);
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.controls button {
+    background: var(--gradient1);
+    border: none;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(10%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.galleryItem {
+    position: absolute;
+    /* Allows stacking items for smooth transition */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transform: scale(0.95);
+    /* Slightly scaled down for entry effect */
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.galleryItem.active {
+    opacity: 1;
+    transform: scale(1);
+    /* Smooth transition to full size */
+}
+
+.galleryGrid {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    overflow: hidden;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+@media (max-width: 768px) {
+    .galleryGrid {
+        grid-template-columns: 1fr;
+        /* Single column for mobile */
+        padding: 0 1rem;
+        /* Padding specifically for mobile */
+    }
+}
+
+/* Gallery item styles and animations */
+.galleryItem {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s ease-in-out;
+    opacity: 0;
+}
