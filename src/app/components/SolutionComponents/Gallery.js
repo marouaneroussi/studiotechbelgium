@@ -34,8 +34,10 @@ const Gallery = ({ items }) => {
           <div className={`${styles.galleryItem} ${styles.fadeIn}`} key={index}>
             <Image
               src={item.imageUrl}
-              alt={item.altText}
+              alt={item.imageAlt}
               className={`${styles.galleryImage} ${styles.scaleUp}`}
+              width={300}
+              height={200}
             />
             <div className={styles.overlay}></div>
             <div className={styles.textContainer}>

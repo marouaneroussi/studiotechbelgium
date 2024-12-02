@@ -1,5 +1,4 @@
 // components/solutionCard/index.js
-
 import styles from "./solution.module.css";
 
 const SolutionCard = ({ title, description, icon }) => {
