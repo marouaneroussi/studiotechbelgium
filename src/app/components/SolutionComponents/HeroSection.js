@@ -41,7 +41,7 @@ const HeroSection = ({
     return () => {
       document.body.removeChild(script);
     };
-  }, []);
+  }, [hasparticles]);
 
   return (
     <div

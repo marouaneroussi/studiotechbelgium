@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const ReferencesSection = () => {
@@ -40,7 +41,7 @@ const ReferencesSection = () => {
           style={{ animation: "scroll 40s linear infinite" }}
         >
           {logos.concat(logos).map((logo, index) => (
-            <img
+            <Image
               key={index}
               src={logo.src}
               alt={logo.alt}

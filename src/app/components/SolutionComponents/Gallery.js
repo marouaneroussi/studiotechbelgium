@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import styles from "./Gallery.module.css";
+import Image from "next/image";
 
 const Gallery = ({ items }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -31,7 +32,7 @@ const Gallery = ({ items }) => {
       <div className={styles.galleryGrid}>
         {visibleItems.map((item, index) => (
           <div className={`${styles.galleryItem} ${styles.fadeIn}`} key={index}>
-            <img
+            <Image
               src={item.imageUrl}
               alt={item.altText}
               className={`${styles.galleryImage} ${styles.scaleUp}`}

@@ -180,8 +180,8 @@ const transmission = () => {
             <p>
               In countries where the infrastructure is sufficiently developed,
               fiber optics provides the most efficient signal transfer solution.
-              The fiber's broadband capabilities allow management of very large
-              data streams. We implement and configure all broadcast world
+              The fiber&apos;s broadband capabilities allow management of very
+              large data streams. We implement and configure all broadcast world
               interfaces with expertise.
             </p>
           </div>
@@ -190,8 +190,8 @@ const transmission = () => {
             <p>
               Wave links provide coverage up to 50km or more in point-to-point
               configurations, enabling transmission of pictures and sound from
-              ENG cameras in wireless setups. This system's key advantages are
-              its exceptional mobility and rapid deployment capabilities.
+              ENG cameras in wireless setups. This system&apos;s key advantages
+              are its exceptional mobility and rapid deployment capabilities.
             </p>
           </div>
           <div className="text-content-block">

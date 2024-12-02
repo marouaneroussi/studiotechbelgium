@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import React, { useState } from "react";
 
 const positions = [
@@ -9,7 +10,7 @@ const positions = [
     type: "Full-time",
     category: "operations",
     description:
-      "We are looking for a Project Manager to join StudioTech Belgium's dynamic team. You will manage audiovisual integration projects from A to Z, including budget control, planning, and team coordination. Requirements: Experience in AV or broadcast industry, excellent communication skills, and ability to manage multiple projects.",
+      "We are looking for a Project Manager to join StudioTech Belgium&apos;s dynamic team. You will manage audiovisual integration projects from A to Z, including budget control, planning, and team coordination. Requirements: Experience in AV or broadcast industry, excellent communication skills, and ability to manage multiple projects.",
   },
   {
     title: "Audiovisual System Engineer",
@@ -17,7 +18,7 @@ const positions = [
     type: "Full-time",
     category: "engineering",
     description:
-      "Join us as an Audiovisual System Engineer to design and implement cutting-edge AV solutions. You'll work with the latest broadcast and AV technologies. Requirements: Technical degree, knowledge of AV systems, and passion for innovative technology.",
+      "Join us as an Audiovisual System Engineer to design and implement cutting-edge AV solutions. You&apos;ll work with the latest broadcast and AV technologies. Requirements: Technical degree, knowledge of AV systems, and passion for innovative technology.",
   },
   {
     title: "Technical Support Engineer",
@@ -25,7 +26,7 @@ const positions = [
     type: "Full-time",
     category: "engineering",
     description:
-      "As a Technical Support Engineer, you'll provide first-line support for our broadcast and AV solutions. You'll troubleshoot issues and ensure optimal system performance. Requirements: Technical background, problem-solving skills, and customer service orientation.",
+      "As a Technical Support Engineer, you&apos;ll provide first-line support for our broadcast and AV solutions. You&apos;ll troubleshoot issues and ensure optimal system performance. Requirements: Technical background, problem-solving skills, and customer service orientation.",
   },
   {
     title: "Sales Manager",
@@ -33,7 +34,7 @@ const positions = [
     type: "Full-time",
     category: "sales",
     description:
-      "We're seeking an experienced Sales Manager to develop our market presence. You'll work with key accounts and identify new business opportunities in the broadcast and AV sector. Requirements: Proven sales experience, industry knowledge, and strong networking abilities.",
+      "We&apos;re seeking an experienced Sales Manager to develop our market presence. You&apos;ll work with key accounts and identify new business opportunities in the broadcast and AV sector. Requirements: Proven sales experience, industry knowledge, and strong networking abilities.",
   },
 ];
 
@@ -59,8 +60,8 @@ const PositionsSection = () => {
         </h2>
 
         <p className="text-center max-w-2xl mx-auto mb-16 text-gray-200 text-lg">
-          We're always looking for talented individuals who share our passion
-          for innovation in broadcast technology. Explore our current
+          We&apos;re always looking for talented individuals who share our
+          passion for innovation in broadcast technology. Explore our current
           opportunities below.
         </p>
 
@@ -122,12 +123,12 @@ const PositionsSection = () => {
                   {position.description}
                 </p>
               </div>
-              <a
+              <Link
                 href="https://studiotech.be/careers/apply"
                 className="apply-btn bg-yellow-500 text-black rounded-full py-2 px-6 text-sm hover:bg-yellow-600 transition-all"
               >
                 Apply Now
-              </a>
+              </Link>
             </div>
           ))}
         </div>

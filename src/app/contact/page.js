@@ -17,7 +17,7 @@ const contactFormSchema = z.object({
   }),
 });
 
-const contact = ({
+const Contact = ({
   formAction = "https://example.com/submit-contact",
   contactEmail = "info@studiotech.be",
   address = "Houtweg 7 1130 Brussels",
@@ -116,10 +116,10 @@ const contact = ({
       <Navbar />
       <div className="contact-container">
         <div className="contact-info">
-          <h1>Let's Connect</h1>
+          <h1>Let&apos;s Connect</h1>
           <p>
             Have a project in mind or want to discuss how we can transform your
-            broadcast capabilities? We're here to listen and help.
+            broadcast capabilities? We&apos;re here to listen and help.
           </p>
 
           <div className="contact-details">
@@ -510,4 +510,4 @@ const contact = ({
   );
 };
 
-export default contact;
+export default Contact;

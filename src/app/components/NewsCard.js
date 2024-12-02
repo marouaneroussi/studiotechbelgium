@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -23,7 +24,7 @@ const NewsCard = ({
     <div className="solution-card">
       <Link href={slug} className="solution-card-link">
         <div className="solution-card-icon">
-          <img src={imageSrc} alt={altText} width="350" height="250" />
+          <Image src={imageSrc} alt={altText} width="350" height="250" />
         </div>
         <div className="pl-[1.5rem] pb-5">
           {card_tag && <span className="card-tag">{card_tag}</span>}

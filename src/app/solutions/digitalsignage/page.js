@@ -40,14 +40,14 @@ const items = [
     imageAlt: "Digital Signage",
     title: "Digital Signage",
     description:
-      "Display of delegates' names on screens L.C.D. mounted on lifts. ",
+      "Display of delegates&apos; names on screens L.C.D. mounted on lifts. ",
   },
   {
     imageUrl: "/images/digital_signage/sonatray.jpg",
     imageAlt: "Digital Signage",
     title: "Digital Signage",
     description:
-      "Display of delegates' names on screens L.C.D. mounted on lifts. The composition, made by computer, is addressed through the network",
+      "Display of delegates&apos; names on screens L.C.D. mounted on lifts. The composition, made by computer, is addressed through the network",
   },
 
   {

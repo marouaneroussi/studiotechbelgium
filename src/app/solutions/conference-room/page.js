@@ -115,7 +115,7 @@ const featuresData = [
       "Interactive displays and wireless presentation solutions for seamless sharing",
   },
 ];
-const DigitalSignagePage = () => {
+const ConferenceRoom = () => {
   return (
     <>
       <Navbar />
@@ -171,7 +171,7 @@ const DigitalSignagePage = () => {
             <p>
               We understand the unique challenges of modern collaboration, from
               hybrid meetings to multimedia content sharing, and provide
-              scalable solutions that adapt to your organization's needs.
+              scalable solutions that adapt to your organization&apos;s needs.
             </p>
           </div>
           <div className="text-content-block">
@@ -197,4 +197,4 @@ const DigitalSignagePage = () => {
   );
 };
 
-export default DigitalSignagePage;
+export default ConferenceRoom;
