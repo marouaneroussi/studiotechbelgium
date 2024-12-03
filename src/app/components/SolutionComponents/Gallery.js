@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import styles from "./Gallery.module.css";
 import Image from "next/image";
 
@@ -8,9 +8,10 @@ const Gallery = ({ items }) => {
   const itemsPerSlide = 4; // Number of items to show per row
   const totalSlides = Math.ceil(items.length / itemsPerSlide);
 
-  const nextSlide = () => {
+  // Wrap the nextSlide function in useCallback
+  const nextSlide = useCallback(() => {
     setCurrentSlide((prevSlide) => (prevSlide + 1) % totalSlides);
-  };
+  }, [totalSlides]);
 
   const prevSlide = () => {
     setCurrentSlide((prevSlide) => (prevSlide - 1 + totalSlides) % totalSlides);
@@ -19,7 +20,7 @@ const Gallery = ({ items }) => {
   useEffect(() => {
     const autoSlide = setInterval(nextSlide, 5000); // Auto-play every 5 seconds
     return () => clearInterval(autoSlide); // Clear interval on component unmount
-  }, []);
+  }, [nextSlide]); // Include nextSlide as a dependency
 
   const visibleItems = items.slice(
     currentSlide * itemsPerSlide,

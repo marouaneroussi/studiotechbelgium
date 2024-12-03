@@ -1,8 +1,9 @@
-"use client";
+"use client"; // This will tell Next.js this is a client-side component
+
 import Link from "next/link";
 import gsap from "gsap";
-
 import React, { useEffect } from "react";
+
 const Header = () => {
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -13,6 +14,7 @@ const Header = () => {
       return () => window.removeEventListener("load", animate);
     }
   }, []);
+
   return (
     <header className="relative w-full h-screen overflow-hidden video-header">
       <video

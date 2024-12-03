@@ -7,23 +7,23 @@ const AchievementsSection = () => {
       subtitle: "We Make Venues Come Alive",
       description:
         "The Latest In-Venue Technology Helps Production, Operations and Presentation Crews Provide Unique Entertainment Experiences",
-      link: "https://example.com/case-study/ubs-arena",
-      imageUrl: "/images/EY0A0622.JPG",
+      link: "/solutions/ob-vans",
+      imageUrl: "/images/obvans.jpg",
     },
     {
       title: "Digital Signage",
       subtitle: "We Make the Workplace Work for You",
       description:
         "Mining Company understands value of investment with energy saving video wall",
-      link: "https://example.com/case-study/agnico-eagle",
-      imageUrl: "/images/digital_signage.JPG",
+      link: "/solutions/digital-signage",
+      imageUrl: "/images/dg.jpg",
     },
     {
       title: "Georgia System Operations Corporation",
       subtitle: "We Empower Connections That Power Our World",
       description:
         "Expansive Video Wall for Mission Critical Visualization of Electricity Operations",
-      link: "https://example.com/case-study/gsoc",
+      link: "/solutions/conference-room",
       imageUrl: "/images/conference_room.jpg",
     },
   ];

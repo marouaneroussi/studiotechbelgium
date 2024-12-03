@@ -1,12 +1,11 @@
 import Navbar from "./components/Navbard";
-import Header from "./components/Header";
 import AchievementsSection from "./components/AchievementsSection";
 import StatsSection from "./components/StateSection";
 import ReferencesSection from "./components/ReferencesSection";
 import MapComponent from "./components/MapComponent";
 import ContactSection from "./components/ContactSection";
 import Footer from "./components/Footer";
-
+import Header from "./components/HeaderWrapper";
 export default function Home() {
   const solutions = [
     {
@@ -105,7 +104,7 @@ export default function Home() {
       <StatsSection />
       <ReferencesSection />
 
-      <MapComponent />
+      {/* <MapComponent /> */}
       {/* Other contact page content here */}
 
       <ContactSection />

@@ -1,4 +1,5 @@
-"use client";
+"use client"; // Ensure this is a client-side component
+
 import React, { useEffect } from "react";
 import "./HeroSection.css"; // Link to your styles for the HeroSection component
 import Link from "next/link";
@@ -11,36 +12,34 @@ const HeroSection = ({
   image,
 }) => {
   useEffect(() => {
-    // Load particles.js script from CDN
+    // Ensure code only runs in the browser (client-side)
+    if (typeof window !== "undefined" && hasparticles) {
+      const script = document.createElement("script");
+      script.src = "https://cdn.jsdelivr.net/npm/particles.js";
+      script.onload = () => {
+        window.particlesJS("particles-js", {
+          particles: {
+            number: { value: 80, density: { enable: true, value_area: 800 } },
+            color: { value: "#fecc00" },
+            shape: { type: "circle" },
+            opacity: { value: 0.3 },
+            size: { value: 3, random: true },
+            line_linked: { enable: true, color: "#fecc00", opacity: 0.2 },
+            move: { enable: true, speed: 2 },
+          },
+          interactivity: {
+            events: { onhover: { enable: true, mode: "repulse" } },
+          },
+          retina_detect: true,
+        });
+      };
+      document.body.appendChild(script);
 
-    if (hasparticles) {
-      return;
+      // Cleanup function to remove the script if the component is unmounted
+      return () => {
+        document.body.removeChild(script);
+      };
     }
-    const script = document.createElement("script");
-    script.src = "https://cdn.jsdelivr.net/npm/particles.js";
-    script.onload = () => {
-      window.particlesJS("particles-js", {
-        particles: {
-          number: { value: 80, density: { enable: true, value_area: 800 } },
-          color: { value: "#fecc00" },
-          shape: { type: "circle" },
-          opacity: { value: 0.3 },
-          size: { value: 3, random: true },
-          line_linked: { enable: true, color: "#fecc00", opacity: 0.2 },
-          move: { enable: true, speed: 2 },
-        },
-        interactivity: {
-          events: { onhover: { enable: true, mode: "repulse" } },
-        },
-        retina_detect: true,
-      });
-    };
-    document.body.appendChild(script);
-
-    // Cleanup function to remove the script if the component is unmounted
-    return () => {
-      document.body.removeChild(script);
-    };
   }, [hasparticles]);
 
   return (

@@ -118,9 +118,7 @@ const DigitalSignagePage = () => {
         hasBanner={false}
         title="Digital Signage"
         description="Transform your space with dynamic digital displays and content management systems"
-        image={
-          "url('/images/digital_signage.jpg') no-repeat center center / cover"
-        }
+        image={"url('/images/dg.jpg') no-repeat center center / cover"}
       />
       <InfoSection
         title={"Our team are here to provide the right digital signage system"}
