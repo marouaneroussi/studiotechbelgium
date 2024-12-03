@@ -51,7 +51,7 @@ const items = [
   },
 
   {
-    imageUrl: "/images/digital_signage/evertz.jpeg",
+    imageUrl: "/images/digital_signage/evertz-min.jpg",
     imageAlt: "Digital Signage",
     title: "Digital Signage",
     description: "Evertz Solutions",
@@ -123,7 +123,7 @@ const DigitalSignagePage = () => {
       <InfoSection
         title={"Our team are here to provide the right digital signage system"}
         desc="A successful digital signage setup involves numerous critical elements. Key factors include the selection of appropriate hardware, software, and content management systems. How the screens are connected, the scale of the deployment, and strategies for ongoing content creation all play essential roles in a seamless digital signage solution."
-        image={"/images/digital_signage.jpg"}
+        image={"/images/digital_signage/public_entrance.jpg"}
         desc_p_two={
           "Our skilled professionals possess deep expertise in creating and delivering high-quality signage systems. We offer flexible solutions designed to adapt to your needs, ensuring engaging and impactful content delivery."
         }

@@ -21,6 +21,14 @@ const SolutionsSection = () => {
       link: "/solutions/conference-room",
     },
     {
+      imageSrc: "/images/digital_signage/evertz-min.jpg",
+      altText: "Professional audio recording studio with mixing console",
+      title: "Digital Signage",
+      description:
+        "Immersive audio experiences crafted with precision and high-quality sound engineering.",
+      link: "/solutions/digitalsignage",
+    },
+    {
       imageSrc: "/images/solutions/television-channel.jpg",
       altText: "Interactive digital display with touch interface",
       title: "Television Channel",
@@ -53,14 +61,7 @@ const SolutionsSection = () => {
         "Transformative lighting solutions for impactful visual experiences in any setting.",
       link: "/solutions/lighting",
     },
-    {
-      imageSrc: "/images/solutions/Digital-Signage.jpg",
-      altText: "Professional audio recording studio with mixing console",
-      title: "Digital Signage",
-      description:
-        "Immersive audio experiences crafted with precision and high-quality sound engineering.",
-      link: "/solutions/digitalsignage",
-    },
+
     {
       imageSrc: "/images/solutions/webstreaming.jpg",
       altText: "Professional stage lighting setup with colorful illumination",

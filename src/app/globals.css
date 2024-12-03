@@ -66,10 +66,8 @@
   --accent2: #ff9900;
   --gradient1: linear-gradient(45deg, #fecc00, #ffdb4d);
   --gradient2: linear-gradient(135deg, #fecc00, #ff9900);
-  --gradient3: radial-gradient(circle, #fecc00, #ff8800);
-  --gradient4: linear-gradient(to right, #fecc00, #ffd700, #fecc00);
-
-
+  --gradient3: linear-gradient(45deg, #fecc00, #ffdb4d);
+  --gradient4: linear-gradient(135deg, #fecc00, #ff9900);
 }
 
 .nav-contact-btn {
@@ -594,20 +592,15 @@ h2 {
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+
 
 body {
   scroll-behavior: smooth;
-  color: var(--foreground);
-  background: var(--background);
+  color: white !important;
+  background:#0a0a0a  !important;
 }
 
-.hover-panel-outer {
+.hover-panel-outer { 
   width: 33.33%;
   padding: 15px;
 }
@@ -3023,4 +3016,17 @@ background: transparent linear-gradient(89deg, #080e2bd4, #080e2bd4 42%, #080e2b
 
 .mission-card:hover {
   transform: translateY(-10px);
+}
+
+.map-wrap {
+  position: relative;
+  width: 100%;
+  height: calc(78vh - 77px);
+  /* calculate height of the screen minus the heading */
+}
+
+.map {
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }

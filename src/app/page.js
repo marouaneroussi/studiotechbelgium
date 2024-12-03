@@ -2,10 +2,13 @@ import Navbar from "./components/Navbard";
 import AchievementsSection from "./components/AchievementsSection";
 import StatsSection from "./components/StateSection";
 import ReferencesSection from "./components/ReferencesSection";
-import MapComponent from "./components/MapComponent";
+// import MapComponent from "./components/MapComponent";
 import ContactSection from "./components/ContactSection";
 import Footer from "./components/Footer";
 import Header from "./components/HeaderWrapper";
+import NewsletterComponent from "./components/NewsletterComponent";
+import MapLibre from "./components/MapLibre";
+
 export default function Home() {
   const solutions = [
     {
@@ -38,8 +41,8 @@ export default function Home() {
     <>
       <Navbar />
       <Header />
-      <div className="min-h-screen">
-        <div className="hero py-12  dark:bg-gray-900">
+      <div>
+        <div className=" bg-[#0a0a0a]">
           {/* Solutions Grid */}
           <div className="solutions-grid grid gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-screen-xl mx-auto px-4 py-20">
             {solutions.map((solution, index) => (
@@ -103,6 +106,8 @@ export default function Home() {
       <AchievementsSection />
       <StatsSection />
       <ReferencesSection />
+      <MapLibre />
+      <NewsletterComponent />
 
       {/* <MapComponent /> */}
       {/* Other contact page content here */}
