@@ -13,9 +13,9 @@ const Navbar = () => {
           <Image
             src="/logo/studiotech-belgium-logo.png"
             alt="Studiotech logo"
-            className="w-60 h-[60px] transition-transform duration-300 hover:scale-105"
-            width={167}
-            height={56}
+            className="transition-transform duration-300 hover:scale-105"
+            width={254}
+            height={0}
           />
         </div>
       </Link>
