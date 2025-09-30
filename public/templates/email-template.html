@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AV Solutions - Contact Form Email</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body
+    style="
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #ffffff;
+      background-color: #121212;
+      margin: 0;
+      padding: 0;
+    "
+  >
+    <div
+      style="
+        max-width: 650px;
+        margin: 0 auto;
+        background-color: #1e1e1e;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 20px;
+      "
+    >
+      <!-- Header -->
+      <div
+        style="
+          background: linear-gradient(135deg, #fecc00, #ff9900);
+          color: #121212;
+          text-align: center;
+          padding: 20px;
+          border-radius: 10px 10px 0 0;
+        "
+      >
+        <h1
+          style="
+            margin: 0;
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+            text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+          "
+        >
+          New Contact Form Submission
+        </h1>
+      </div>
+
+      <!-- Body -->
+      <div style="padding: 20px; background-color: #1e1e1e">
+        <p style="margin: 0 0 15px; color: #ffffff">Hello AV Solutions Team,</p>
+        <p style="margin: 0 0 15px; color: #ffffff">
+          A new contact form submission has been received with the following
+          details:
+        </p>
+
+        <!-- Contact Details -->
+        <div
+          style="
+            background: rgba(50, 50, 50, 0.9);
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+          "
+        >
+          <p style="margin: 10px 0; color: #ffffff">
+            <strong style="color: #fecc00">Name:</strong> {{name}}
+          </p>
+          <p style="margin: 10px 0; color: #ffffff">
+            <strong style="color: #fecc00">Email:</strong> {{email}}
+          </p>
+          <p style="margin: 10px 0; color: #ffffff">
+            <strong style="color: #fecc00">Phone:</strong>{{phone}}
+          </p>
+          <p style="margin: 10px 0; color: #ffffff">
+            <strong style="color: #fecc00">Company:</strong> {{company}}
+          </p>
+          <p style="margin: 10px 0; color: #ffffff">
+            <strong style="color: #fecc00">Area of Interest:</strong
+            >{{interest}}
+          </p>
+          <p style="margin: 10px 0; color: #ffffff">
+            <strong style="color: #fecc00">Message:</strong>{{message}}
+          </p>
+          <p style="margin: 10px 0; color: #ffffff">
+            I'm interested in discussing advanced virtual production solutions
+            for our upcoming media projects. Could we schedule a consultation to
+            explore potential collaboration?
+          </p>
+        </div>
+
+        <p style="margin: 0 0 20px; color: #ffffff">
+          Please review and respond to this inquiry as soon as possible.
+        </p>
+
+        <!-- Call-to-Action -->
+        <div style="text-align: center">
+          <a
+            href="https://example.com/admin/contact-submissions"
+            style="
+              display: inline-block;
+              background: linear-gradient(135deg, #fecc00, #ff9900);
+              color: #121212;
+              padding: 10px 20px;
+              text-decoration: none;
+              border-radius: 5px;
+              font-weight: bold;
+              box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            "
+            >View Submission</a
+          >
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div
+        style="
+          text-align: center;
+          color: #aaaaaa;
+          font-size: 12px;
+          padding: 15px;
+          border-top: 1px solid rgba(255, 255, 255, 0.1);
+          background: #101010;
+        "
+      >
+        <p style="margin: 5px 0">
+          © 2024 Studiotech Belgium. All rights reserved.
+        </p>
+        <p style="margin: 5px 0">123 Broadcast Street, Media City, TX 75001</p>
+      </div>
+    </div>
+  </body>
+</html>
