@@ -5,37 +5,51 @@ import React, { useState } from "react";
 
 const positions = [
   {
-    title: "Project Manager",
-    location: "Brussels, Belgium",
-    type: "Full-time",
-    category: "operations",
-    description:
-      "We are looking for a Project Manager to join StudioTech Belgium&apos;s dynamic team. You will manage audiovisual integration projects from A to Z, including budget control, planning, and team coordination. Requirements: Experience in AV or broadcast industry, excellent communication skills, and ability to manage multiple projects.",
-  },
-  {
-    title: "Audiovisual System Engineer",
+    title: "Sales Engineer",
     location: "Brussels, Belgium",
     type: "Full-time",
     category: "engineering",
     description:
-      "Join us as an Audiovisual System Engineer to design and implement cutting-edge AV solutions. You&apos;ll work with the latest broadcast and AV technologies. Requirements: Technical degree, knowledge of AV systems, and passion for innovative technology.",
-  },
+      "Studiotech Belgium is seeking for our office in Belgium a Sales Engineer, bilingual in Dutch/French. Knowledge of English at an intermediate level is required.",
+    file_path : "files/sales.doc"
+    },
   {
-    title: "Technical Support Engineer",
+    title: "IT Specialist",
     location: "Brussels, Belgium",
     type: "Full-time",
     category: "engineering",
     description:
-      "As a Technical Support Engineer, you&apos;ll provide first-line support for our broadcast and AV solutions. You&apos;ll troubleshoot issues and ensure optimal system performance. Requirements: Technical background, problem-solving skills, and customer service orientation.",
-  },
+      "Studiotech Belgium is seeking an IT specialist based in our Brussels office, with a real passionfor IT-centric technologies and operational models within a broadcasting environment.  Willing to travel as required.",
+    file_path : "files/it-specialist.pdf"
+    },
+  
   {
-    title: "Sales Manager",
+    title: "Electricien",
     location: "Brussels, Belgium",
     type: "Full-time",
-    category: "sales",
+    category: "Electrician",
     description:
-      "We&apos;re seeking an experienced Sales Manager to develop our market presence. You&apos;ll work with key accounts and identify new business opportunities in the broadcast and AV sector. Requirements: Proven sales experience, industry knowledge, and strong networking abilities.",
-  },
+      "Studiotech Belgium is seeking a hands-on Industrial Electrician based in our Brussels office, with a real passion for basic electronics and electricity, with the ability to travel as required.",
+   file_path : "files/electrician.docx"
+    },
+    {
+    title: "Broadcast Engineer",
+    location: "Brussels, Belgium",
+    type: "Full-time",
+    category: "engineering",
+    description:
+      "Studiotech Belgium is seeking for our office in Belgium an experienced Purchasing Manager based in our Brussels office.",
+    file_path : "files/broadcast.pdf"
+    },
+  {
+    title: "Purchasing Manager",
+    location: "Brussels, Belgium",
+    type: "Full-time",
+    category: "purchase",
+    description:
+      "Studiotech Belgium is seeking for our office in Belgium an experienced Purchasing Manager based in our Brussels office.",
+    file_path : "files/purchasing-manager.pdf"
+    },
 ];
 
 const PositionsSection = () => {
@@ -124,7 +138,7 @@ const PositionsSection = () => {
                 </p>
               </div>
               <Link
-                href="https://studiotech.be/careers/apply"
+                href={position.file_path}
                 className="apply-btn bg-yellow-500 text-black rounded-full py-2 px-6 text-sm hover:bg-yellow-600 transition-all"
               >
                 Apply Now

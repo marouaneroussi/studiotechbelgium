@@ -1,14 +1,9 @@
 "use client";
-import Image from "next/image";
 import React from "react";
-import InfoSection from "../components/InfoSection";
 import ReferencesSection from "../components/ReferencesSection";
 import Footer from "../components/Footer";
-import Hero from "../components/hero";
 import Navbar from "../components/Navbard";
-import FeaturesSection from "../components/SolutionComponents/FeaturesSection";
-import PositionsSection from "../components/PositionsSection";
-import StatsSection from "../components/StateSection";
+
 
 const featuresData = [
   {
@@ -65,12 +60,17 @@ const about = () => {
   return (
     <>
       <Navbar />
-      <Hero
-        title="About Studiotech Belgium"
-        desc="Since 1997, StudioTech Belgium has been at the forefront of innovative broadcast solutions"
-        back="/images/stbe-cover.jpg"
-      />
-
+     
+    <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        className=" top-0 left-0 w-full h-full object-cover"
+      >
+        <source src="https://video.wixstatic.com/video/4cd6e4_33f3b090cf02456cb53765deb382bbf1/480p/mp4/file.mp4?fileUsed=false" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
       <section className="about-stats">
         <div className="stat-item">
           <div className="stat-number">35+</div>

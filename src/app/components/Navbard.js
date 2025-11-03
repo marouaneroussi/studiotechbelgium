@@ -19,30 +19,7 @@ const Navbar = () => {
           />
         </div>
       </Link>
-      <div className="hidden md:flex space-x-8">
-        <Link href="/solutions" className="text-white hover:text-yellow-400">
-          Solutions
-        </Link>
-        <Link href="/services" className="text-white hover:text-yellow-400">
-          Services
-        </Link>
-        <Link href="/news" className="text-white hover:text-yellow-400">
-          News
-        </Link>
-        <Link href="/partners" className="text-white hover:text-yellow-400">
-          Partners
-        </Link>
-        <Link
-          href="/about-studiotech"
-          className="text-white hover:text-yellow-400"
-        >
-          About
-        </Link>
-
-        <Link href="/contact" className="nav-contact-btn">
-          Get in Touch
-        </Link>
-      </div>
+     
       {/* زر القائمة الجانبية عند الشاشات الصغيرة */}
       <button
         className="text-white md:hidden focus:outline-none"
@@ -52,7 +29,7 @@ const Navbar = () => {
       </button>
 
       {/* القائمة الجانبية للشاشات الصغيرة */}
-      {isOpen && (
+      {isOpen ? (
         <div className="absolute top-16 right-0 bg-black bg-opacity-95 w-full flex flex-col items-center space-y-4 py-4 md:hidden">
           <Link
             href="/solutions"
@@ -68,10 +45,18 @@ const Navbar = () => {
           >
             Services
           </Link>
-          <Link href="/news" className="text-white hover:text-yellow-400">
+          <Link
+            href="/news"
+            className="text-white hover:text-yellow-400"
+            onClick={() => setIsOpen(false)}
+          >
             News
           </Link>
-          <Link href="/partners" className="text-white hover:text-yellow-400">
+          <Link
+            href="/partners"
+            className="text-white hover:text-yellow-400"
+            onClick={() => setIsOpen(false)}
+          >
             Partners
           </Link>
           <Link
@@ -81,7 +66,6 @@ const Navbar = () => {
           >
             About
           </Link>
-
           <Link
             href="/contact"
             className="nav-contact-btn"
@@ -90,7 +74,46 @@ const Navbar = () => {
             Get in Touch
           </Link>
         </div>
+      ) : (
+       
+        // هذا الجزء يظهر لما القائمة مغلقة (يمكن تخليه فارغ أو placeholder)
+         <>
+        <div className="hidden md:flex space-x-8">
+          <div className="hidden md:flex space-x-8 items-center">
+        <Link href="/solutions" className="text-white hover:text-yellow-400">
+          Solutions
+        </Link>
+        <Link href="/services" className="text-white hover:text-yellow-400">
+          Services
+        </Link>
+        <Link href="/news" className="text-white hover:text-yellow-400">
+          News
+        </Link>
+        <Link href="/partners" className="text-white hover:text-yellow-400">
+          Partners
+        </Link>
+        <Link
+          href="/sales-and-conditions"
+          className="text-white hover:text-yellow-400"
+        >
+          Sales And Conditions
+        </Link>
+        <Link
+          href="/about-studiotech"
+          className="text-white hover:text-yellow-400"
+        >
+          About
+        </Link>
+</div>
+
+          <Link href="/contact" className="nav-contact-btn">
+          Get in Touch
+        </Link>
+      </div>
+     
+        </>
       )}
+     
     </nav>
   );
 };

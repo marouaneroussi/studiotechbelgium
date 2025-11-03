@@ -12,6 +12,49 @@ const ReferencesSection = () => {
       alt: "arri",
     },
     {
+      src: "/images/company_logo/vislink.svg",
+      alt: "vislink",
+    },
+    {
+      src: "/images/company_logo/vinten.svg",
+      alt: "vinten",
+    },
+    {
+      src: "/images/company_logo/sony.png",
+      alt: "sony",
+    },
+    {
+      src: "/images/company_logo/NewTek_logo.svg",
+      alt: "sony",
+    },
+    {
+      src: "/images/company_logo/blackmagic.svg",
+      alt: "blackmagic",
+    },
+    {
+      src: "/images/company_logo/aveco.svg",
+      alt: "aveco",
+    },
+    {
+      src: "/images/company_logo/autocue.png",
+      alt: "autocue",
+    },{
+      src: "/images/partners/10_planar_logo_1.png",
+      alt: "planar",
+    },
+    {
+      src: "/images/company_logo/tsl-products.png",
+      alt: "tsl product logo",
+    },
+     {
+      src: "/images/company_logo/autoscript_logo.svg",
+      alt: "autoscript logo",
+    },
+      {
+      src: "/images/company_logo/apantac.svg",
+      alt: "apantac logo",
+    },
+    {
       src: "/images/company_logo/aeta.svg",
       alt: "aeta",
     },
@@ -27,6 +70,7 @@ const ReferencesSection = () => {
       src: "/images/company_logo/blueshape-logo.png",
       alt: "blueshape-logo",
     },
+
   ];
 
   return (
@@ -45,9 +89,9 @@ const ReferencesSection = () => {
               key={index}
               src={logo.src}
               alt={logo.alt}
-              width="80"
-              height="80"
-              className="reference-logo inline-block"
+              width="100"
+              height="100"
+              className="reference-logo inline-block "
             />
           ))}
         </div>

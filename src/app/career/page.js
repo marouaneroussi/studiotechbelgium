@@ -8,6 +8,7 @@ import Hero from "../components/hero";
 import Navbar from "../components/Navbard";
 import FeaturesSection from "../components/SolutionComponents/FeaturesSection";
 import PositionsSection from "../components/PositionsSection";
+import InfoSectionWithVideo from "../components/InfoSectioWithVideo";
 
 const featuresData = [
   {
@@ -69,10 +70,10 @@ const career = () => {
         desc="We are always looking for talented individuals to join our team."
         back="/images/career/join-our-team.jpg"
       />
-      <InfoSection
+      <InfoSectionWithVideo
         title="Where Innovation Meets Excellence"
         desc="We are always looking for talented individuals to join our team. If you are interested in working with us, please send us your resume and cover letter."
-        image="/images/stbe-cover.jpg"
+        video_uri="https://video.wixstatic.com/video/4cd6e4_33f3b090cf02456cb53765deb382bbf1/480p/mp4/file.mp4?fileUsed=false"
         bulletPoints={[
           "→ Innovative work environment",
           "→ Work-life balance",
