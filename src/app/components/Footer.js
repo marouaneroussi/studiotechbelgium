@@ -128,7 +128,7 @@ const Footer = () => {
       </div>
 
       <div className="footer-bottom">
-        <p>© 2024 Studiotech Blegium. All rights reserved.</p>
+        <p>© 2025 Studiotech Belgium. All rights reserved.</p>
         <div className="footer-legal">
           <Link href="/privacy">Privacy Policy</Link> |
           <Link href="/terms">Terms of Service</Link>
