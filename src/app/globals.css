@@ -1,9 +1,10 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 /* Import Slick Carousel styles */
 @import 'slick-carousel/slick/slick.css';
 @import 'slick-carousel/slick/slick-theme.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 
 @layer utilities {
   @keyframes scroll {
@@ -390,13 +391,17 @@ h2 {
 }
 
 .footer-bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  padding-top: 2rem;
-  text-align: center;
-  font-size: 0.9rem;
-  opacity: 0.7;
-}
+/* text-align: center; */
+/* opacity: .7; */
+border-top: 1px solid #ffffff1a;
+padding-top: 2rem;
+font-size: .9rem;
 
+justify-content: center;
+justify-items: center;
+flex: auto;
+display: grid;
+}
 .social-links {
   display: flex;
   gap: 1rem;

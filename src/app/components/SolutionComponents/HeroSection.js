@@ -10,6 +10,7 @@ const HeroSection = ({
   title,
   description,
   image,
+  button
 }) => {
   useEffect(() => {
     // Ensure code only runs in the browser (client-side)
@@ -58,12 +59,13 @@ const HeroSection = ({
       <div className="hero-content">
         <h1>{title}</h1>
         <p>{description}</p>
-        <Link
+        
+          {!button ? <Link
           href="/"
           className="inline-block py-4 px-8 bg-gradient-to-r from-[#fecc00] to-[#ff9900]  rounded-full text-black font-bold mt-4 transition-transform duration-300 transform hover:scale-105"
-        >
-          Get Started
-        </Link>
+        >Get Started</Link>: ""}
+         
+        
       </div>
     </div>
   );

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from "react";
+import Image from "next/image";
 
 const Footer = () => {
   return (
@@ -42,7 +43,7 @@ const Footer = () => {
               <Link href="/news">News</Link>
             </li>
             <li>
-              <Link href="/blog">Blog</Link>
+              <Link href="/studiotech-offices">Studiotech Offices</Link>
             </li>
           </ul>
         </div>
@@ -127,11 +128,23 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="footer-bottom">
-        <p>© 2025 Studiotech Belgium. All rights reserved.</p>
-        <div className="footer-legal">
-          <Link href="/privacy">Privacy Policy</Link> | <Link href="/terms">Terms of Service</Link>
-          
+      <div className="" >
+
+         
+                       <div className="footer-bottom">
+                        <Image 
+      
+                        src="/logo/studiotech-one-letter-logo.png"
+                        alt={"studiotech one letter logo"}
+                        width="100"
+                        height="100"
+                        
+                      />
+        <p className="opacity-[0.7] pt-4">© 2025 Studiotech Belgium. All rights reserved.</p>
+        <div className="footer-legal  opacity-[0.7]">
+         
+          <Link href="/privacy">Privacy Policy</Link> | <Link href="/sales-and-conditions">Terms of Service</Link>
+          </div>
         </div>
       </div>
     </footer>

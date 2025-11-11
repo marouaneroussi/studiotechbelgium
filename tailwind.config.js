@@ -1,12 +1,14 @@
+// tailwind.config.js
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+export default {
   darkMode: "class",
 
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/pages/**/*.{js,jsx,ts,tsx,mdx}",
+    "./src/components/**/*.{js,jsx,ts,tsx,mdx}",
+    "./src/app/**/*.{js,jsx,ts,tsx,mdx}",
   ],
+
   theme: {
     extend: {
       colors: {
@@ -15,5 +17,6 @@ module.exports = {
       },
     },
   },
+
   plugins: [],
 };

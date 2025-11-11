@@ -1,111 +1,112 @@
-import React from "react";
+"use client";
 
-const AchievementsSection = () => {
-  const caseStudies = [
-    {
-      title: "UBS Arena",
-      subtitle: "We Make Venues Come Alive",
-      description:
-        "The Latest In-Venue Technology Helps Production, Operations and Presentation Crews Provide Unique Entertainment Experiences",
-      link: "/solutions/ob-vans",
-      imageUrl: "/images/obvans.jpg",
-    },
-    {
-      title: "Digital Signage",
-      subtitle: "We Make the Workplace Work for You",
-      description:
-        "Mining Company understands value of investment with energy saving video wall",
-      link: "/solutions/digital-signage",
-      imageUrl: "/images/dg.jpg",
-    },
-    {
-      title: "Georgia System Operations Corporation",
-      subtitle: "We Empower Connections That Power Our World",
-      description:
-        "Expansive Video Wall for Mission Critical Visualization of Electricity Operations",
-      link: "/solutions/conference-room",
-      imageUrl: "/images/conference_room.jpg",
-    },
-  ];
+import Image from "next/image";
+import Link from "next/link";
+import { motion } from "framer-motion";
 
+const caseStudies = [
+  {
+    title: "RTS – Senegal",
+    subtitle: "Broadcast Infrastructure Modernisation",
+    description:
+      "Complete modernisation of two TV studios, control rooms and mobile DSNG units in Senegal by Studiotech Belgium.",
+    link: "/solutions/broadcast-senegal",
+    imageUrl: "/images/obvans.jpg",
+  },
+  {
+    title: "Mobile Studio System",
+    subtitle: "Multi-Camera News Gathering Solution",
+    description:
+      "Field-deployable multi-camera mobile studio system developed and delivered by Studiotech Belgium.",
+    link: "/solutions/mobile-studio",
+    imageUrl: "/images/services/mobile-studio-system.jpeg",
+  },
+  {
+    title: "Betar Radio – Bangladesh",
+    subtitle: "Digital Radio Station Implementation",
+    description:
+      "Turnkey installation of five-studio radio station + master control rooms and RF transmission for Betar in Dhaka.",
+    link: "/solutions/radio-bangladesh",
+    imageUrl: "/images/services/radio_bangladesh.jpg",
+  },
+  {
+    title: "Broadcast Sports VAR & OB Vans",
+    subtitle: "OB Vans & Live Production for African Championships",
+    description:
+      "Design and delivery of OB Vans and live production systems for major African sports events by Studiotech Belgium.",
+    link: "/solutions/ob-vans-sports",
+    imageUrl: "/images/services/var.jpg",
+  },
+  {
+    title: "DSNG/OB Truck – Niger",
+    subtitle: "10-Camera HD Production Truck",
+    description:
+      "Supply and commissioning of a 10-camera HD production truck for the Republic of Niger by Studiotech Belgium.",
+    link: "/solutions/truck-niger",
+    imageUrl: "/images/services/Production-truck.jpeg",
+  },
+  {
+    title: "Transmission & Digital Workflow Solutions",
+    subtitle: "Turnkey Transmission Networks & Digital Integration",
+    description:
+      "End-to-end digital workflow and transmission network projects executed globally by Studiotech Belgium.",
+    link: "/solutions/transmission-workflow",
+    imageUrl: "/images/services/transmission_workflow.jpg",
+  },
+];
+
+export default function AchievementsSection() {
   return (
-    <section className="achievements-section">
-      <div className="row-fluid mx-auto">
-        <div
-          className="span12 widget-span widget-type-cell"
-          style={{ padding: 0 }}
-        >
-          <div className="row-fluid-wrapper">
-            <div className="row-fluid">
-              <div className="span12">
-                <div className="hps-wrapper">
-                  <div className="page-anchor-wrapper">
-                    <a
-                      id="our-work"
-                      className="page-anchor"
-                      style={{ transform: "translateY(-80px)" }}
-                    ></a>
-                  </div>
+    <section className="py-24 bg-black">
+      <h2 className="text-center text-5xl font-bold text-[#fecc00] mb-16">
+        OUR WORK
+      </h2>
 
-                  <div className="hps-title-wrapper">
-                    <h3 className="hps-title text-[4rem]  font-bold text-center  text-[#fecc00] mt-[50px] mb-[70px]">
-                      OUR WORK
-                    </h3>
-                  </div>
-
-                  <div className="hps cs slick-initialized slick-slider">
-                    <div className="slick-list">
-                      <div className="slick-track">
-                        {caseStudies.map((caseStudy, index) => (
-                          <div
-                            key={index}
-                            className="hover-panel-outer case_studies slick-slide slick-active"
-                          >
-                            <div className="hover-panel">
-                              <div
-                                className="hover-panel-bg"
-                                style={{
-                                  backgroundImage: `url(${caseStudy.imageUrl})`,
-                                }}
-                              ></div>
-                              <div className="hover-panel-content">
-                                <h3>{caseStudy.title}</h3>
-                                <h2>{caseStudy.subtitle}</h2>
-                                <p>{caseStudy.description}</p>
-                                <a
-                                  href={caseStudy.link}
-                                  className="hover-panel-link"
-                                >
-                                  Explore More{" "}
-                                  <i className="fa-solid fa-angle-right"></i>
-                                </a>
-                              </div>
-                            </div>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="hps-bot">
-                    <a
-                      href="https://example.com/case-studies"
-                      className="btn btn-basic btn-white-hover hps-btn"
-                      style={{
-                        background: "linear-gradient(45deg, #fecc00, #ff9900)",
-                      }}
-                    >
-                      View All Case Studies
-                    </a>
-                  </div>
-                </div>
-              </div>
+      <div className="max-w-7xl mx-auto grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-10 px-6">
+        {caseStudies.map((item, index) => (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: index * 0.12 }}
+            className="group relative rounded-2xl overflow-hidden shadow-xl"
+          >
+            <div className="relative h-80 w-full">
+              <Image
+                src={item.imageUrl}
+                alt={item.title}
+                fill
+                className="object-cover transition-transform duration-500 group-hover:scale-110"
+              />
             </div>
-          </div>
-        </div>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-black/0 opacity-90"></div>
+
+            <div className="absolute bottom-5 left-5 right-5 text-white">
+              <h3 className="text-xl font-bold">{item.title}</h3>
+              <h4 className="text-md text-[#fecc00] font-semibold">
+                {item.subtitle}
+              </h4>
+              <p className="mt-2 text-sm opacity-90">{item.description}</p>
+              <Link
+                href={item.link}
+                className="inline-block mt-3 text-[#fecc00] font-medium hover:underline"
+              >
+                Explore More →
+              </Link>
+            </div>
+          </motion.div>
+        ))}
+      </div>
+
+      <div className="text-center mt-16">
+        <Link
+          href="/news"
+          className="px-10 py-4 rounded-xl font-semibold bg-[#fecc00] text-black hover:bg-[#ffdd44] transition"
+        >
+          View All Case Studies
+        </Link>
       </div>
     </section>
   );
-};
-
-export default AchievementsSection;
+}

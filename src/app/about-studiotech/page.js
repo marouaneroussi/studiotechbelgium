@@ -122,7 +122,7 @@ const about = () => {
         <div className="milestone-track">
           <div className="milestone-item">
             <div className="milestone-content">
-              <h3>1988</h3>
+              <h3>1990</h3>
               <p>
                 StudioTech Belgium founded with a vision to revolutionize
                 broadcast technology
