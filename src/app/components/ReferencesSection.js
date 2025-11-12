@@ -7,7 +7,7 @@ const ReferencesSection = () => {
     { src: "/images/company_logo/evertz.svg", alt: "evertz" },
     { src: "/images/company_logo/arri.svg", alt: "arri" },
     { src: "/images/company_logo/vislink.svg", alt: "vislink" },
-    { src: "/images/company_logo/Vinten.svg", alt: "vinten" },
+    { src: "/images/company_logo/Vinten-logo.svg", alt: "vinten" },
     { src: "/images/company_logo/sony.png", alt: "sony" },
     { src: "/images/company_logo/NewTek_logo.svg", alt: "NewTek" },
     { src: "/images/company_logo/blackmagic.svg", alt: "blackmagic" },
