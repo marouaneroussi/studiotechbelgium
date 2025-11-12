@@ -5,72 +5,82 @@ import Link from "next/link";
 import gsap from "gsap";
 
 const Header = () => {
-  const videos = ["/videos/team.mp4", "/videos/studio.mp4"]; // your 2 videos
+  const videos = ["/videos/team.mp4", "/videos/studio.mp4"];
   const [currentVideo, setCurrentVideo] = useState(0);
 
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      // ✅ GSAP animation
-      gsap.fromTo(
-        ".video-header",
-        { opacity: 0, y: 50 },
-        { opacity: 1, y: 0, duration: 1.2, ease: "power2.out" }
-      );
+    // ✅ Entrance animation
+    gsap.fromTo(
+      ".header-content",
+      { opacity: 0, y: 40 },
+      { opacity: 1, y: 0, duration: 1.2, ease: "power3.out" }
+    );
 
-      // ✅ Auto-change video every 10 seconds
-      const interval = setInterval(() => {
-        setCurrentVideo((prev) => (prev + 1) % videos.length);
-      }, 6000); // change every 10s
+    // ✅ Smooth fade-in video transition
+    gsap.fromTo(
+      ".header-video",
+      { opacity: 0 },
+      { opacity: 1, duration: 1.5, ease: "power2.out" }
+    );
 
-      // cleanup
-      return () => clearInterval(interval);
-    }
-  }, [videos.length]);
+    // ✅ Auto change videos every 6 seconds
+    const interval = setInterval(() => {
+      setCurrentVideo((prev) => (prev + 1) % videos.length);
+    }, 6000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   return (
-    <header className="relative w-full h-screen overflow-hidden video-header">
-      {/* Background Video */}
+    <header className="relative w-full h-screen overflow-hidden">
+      {/* ✅ Background Video Layer */}
       <video
-        key={currentVideo} // Important for re-rendering when the source changes
+        key={currentVideo}
         autoPlay
         muted
         loop
         playsInline
-        preload="metadata"
-        className="absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000"
+        className="header-video absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000"
       >
         <source src={videos[currentVideo]} type="video/mp4" />
-        Your browser does not support the video tag.
       </video>
 
-      {/* Dark Overlay + Content */}
-      <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-60 flex flex-col justify-center items-center text-center px-6">
-        <div className="z-10 max-w-3xl">
-          <h1 className="text-5xl md:text-6xl font-extrabold mb-6 text-transparent bg-clip-text animate-shimmer bg-gradient-to-r from-yellow-400 via-yellow-200 to-yellow-500">
-            Professional Audiovisual Solutions
-          </h1>
+      {/* ✅ Soft gradient overlay for premium look */}
+      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black/70 via-black/60 to-black/80"></div>
 
-          <p className="text-lg md:text-xl mb-10 text-gray-200 font-light opacity-90 leading-relaxed">
-            Delivering cutting-edge broadcast technology and engineering excellence
-          </p>
+      {/* ✅ Content Layer */}
+      <div className="absolute inset-0 flex flex-col justify-center items-center text-center px-6 header-content">
+        <h1 className="text-4xl md:text-6xl font-extrabold mb-6 leading-tight bg-gradient-to-r from-yellow-300 via-yellow-400 to-yellow-300 bg-clip-text text-transparent drop-shadow-md animate-pulse-slow">
+          Professional Audiovisual Solutions
+        </h1>
 
-          <Link
-            href="/solutions"
-            className="inline-block py-4 px-10 bg-gradient-to-r from-[#fecc00] to-[#ff9900] rounded-full text-black font-semibold text-lg transition-transform duration-300 transform hover:scale-105"
-          >
-            Explore Our Solutions
-          </Link>
-        </div>
+        <p className="text-lg md:text-xl text-gray-200 font-light opacity-90 max-w-2xl leading-relaxed mb-10">
+          Delivering cutting-edge broadcast technology and engineering excellence.
+        </p>
 
-        {/* Animated Scroll Indicator */}
-        <svg
-          className="animate-bounce w-8 h-8 mt-10 absolute bottom-4 left-1/2 transform -translate-x-1/2"
-          fill="currentColor"
-          stroke="none"
-          viewBox="0 0 24 24"
+        {/* ✅ Main CTA */}
+        <Link
+          href="/solutions"
+          className="inline-block py-4 px-10 rounded-full text-black font-semibold text-lg bg-gradient-to-r from-[#fecc00] to-[#ff9900] shadow-lg hover:shadow-2xl transition-transform duration-300 hover:scale-105"
         >
-          <path d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z" fill="#facc15" />
-        </svg>
+          Explore Our Solutions
+        </Link>
+
+        {/* ✅ Upgraded Scroll Indicator */}
+        <div className="absolute bottom-8">
+          <div className="animate-bounce flex flex-col items-center">
+            <div className="w-1 h-6 rounded-full bg-yellow-400 mb-2"></div>
+            <svg
+              className="w-7 h-7 text-yellow-400"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+            >
+              <path d="M19 9l-7 7-7-7" />
+            </svg>
+          </div>
+        </div>
       </div>
     </header>
   );
